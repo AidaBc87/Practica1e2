@@ -1,260 +1,244 @@
-# 🎓 **Aplicación: Explicación de las vistas y URLs de Django**  
-**Curso: Introducción a Django (Backend Web)**  
-**Nivel: Principiante**  
-**Dirigido a: Estudiantes de preparatoria**
+# Blog-publicaciones-en-django
+Guia para aprender paso a paso para crear un proyecto básico en Django. Esta guía la utilizaran los estudiantes de preparatoria. nivel principiante. Computadora con windows.
+¡Claro! A continuación, te presento una **guía paso a paso** para que estudiantes de **preparatoria** puedan crear un **proyecto básico en Django**, desde cero, en una computadora con **Windows**. Todo está explicado de forma clara, sencilla y con instrucciones precisas.
 
 ---
 
-## 🔧 **1. Procedimiento para acceder a la terminal de Windows**
+## 📚 **Guía Paso a Paso: Crear un Proyecto Básico en Django (Nivel Principiante)**
+
+---
+
+### ✅ Requisitos previos
+- Tener instalado **Python 3.6 o superior**.
+- Tener instalado **Visual Studio Code (VS Code)**.
+- Conexión a internet.
+
+---
+
+### 🔹 Paso 1: Abrir la consola "cmd" de Windows
 
 1. Presiona la tecla **Windows** del teclado.
-2. Escribe: **"Símbolo del sistema"** o **"cmd"**.
-3. Haz clic en **"Símbolo del sistema"** o presiona **Enter**.
-4. Se abrirá una ventana negra llamada **CMD (Command Prompt)**. Aquí puedes escribir comandos.
+2. Escribe: `cmd`
+3. Haz clic en **Símbolo del sistema** o **Command Prompt**.
+4. Se abrirá una ventana negra (la terminal).
 
-> ✅ Consejo: Puedes escribir `cls` y dar Enter para limpiar la pantalla.
-
----
-
-## 📁 **2. Procedimiento para crear carpeta de trabajo “practica1”**
-
-En la terminal (cmd), escribe:
-
-```bash
-mkdir practica1
-```
-
-Esto crea una carpeta llamada **practica1** en la ubicación actual (por ejemplo, en `C:\Users\TuNombre`).
-
-> ✅ Para ver que se creó: escribe `dir` y verás la lista de carpetas y archivos.
+> ✅ Ahora estás en la consola de Windows.
 
 ---
 
-## 💻 **3. Procedimiento desde terminal CMD para abrir VS Code**
+### 🔹 Paso 2: Crear carpeta de trabajo `Guia_Django`
 
-Primero, asegúrate de tener **Visual Studio Code (VS Code)** instalado.
-
-En la terminal, entra a la carpeta:
+En la consola `cmd`, escribe:
 
 ```bash
-cd practica1
+mkdir Guia_Django
 ```
 
-Luego escribe:
+Luego, entra a la carpeta:
+
+```bash
+cd Guia_Django
+```
+
+> ✅ Ahora estás dentro de tu carpeta de trabajo.
+
+---
+
+### 🔹 Paso 3: Abrir VS Code desde la terminal
+
+En la misma terminal, escribe:
 
 ```bash
 code .
 ```
 
-Esto abre **VS Code** con la carpeta `practica1` como carpeta de trabajo.
-
-> ✅ Si no funciona, descarga VS Code desde: https://code.visualstudio.com/
+> ✅ Esto abrirá VS Code en la carpeta actual (`Guia_Django`).
 
 ---
 
-## 🐍 **4. Desde terminal verificar la instalación de Python**
+### 🔹 Paso 4: Abrir la terminal de VS Code
 
-Escribe en la terminal:
+1. En VS Code, haz clic en el menú **Terminal**.
+2. Selecciona **Nuevo terminal**.
+3. Aparecerá una nueva terminal dentro de VS Code.
+
+> ✅ Ahora puedes ejecutar comandos desde VS Code.
+
+---
+
+### 🔹 Paso 5: Ver la versión de Python
+
+En la terminal de VS Code, escribe:
 
 ```bash
 python --version
 ```
 
-o
+> ✅ Debe aparecer algo como `Python 3.x.x`. Si no, instala Python desde [python.org](https://www.python.org/downloads/).
+
+---
+
+### 🔹 Paso 6: Crear un entorno virtual llamado `.venv`
+
+En la terminal:
 
 ```bash
-py --version
+python -m venv .venv
 ```
 
-Deberías ver algo como:
-
-```
-Python 3.10.6
-```
-
-> ✅ Si no aparece, debes instalar Python desde: https://www.python.org/downloads/
+> ✅ Se creó una carpeta `.venv` con tu entorno virtual.
 
 ---
 
-## 🌐 **5. Procedimiento para crear un entorno virtual**
+### 🔹 Paso 7: Activar el entorno virtual
 
-Un entorno virtual es como una "cajita" donde instalas solo lo que necesitas para tu proyecto.
-
-En la terminal (dentro de `practica1`), escribe:
+En la terminal de VS Code:
 
 ```bash
-python -m venv env
+.venv\Scripts\activate
 ```
 
-Esto crea una carpeta llamada **env** que será tu entorno virtual.
+> ✅ Verás que el nombre `(.venv)` aparece al inicio de la línea. ¡Estás en el entorno!
 
 ---
 
-## 🔌 **6. Procedimiento para activar el entorno virtual**
+### 🔹 Paso 8: Instalar Django
 
-En Windows, escribe:
-
-```bash
-env\Scripts\activate
-```
-
-Verás que en la terminal aparece `(env)` al inicio:
-
-```
-(env) C:\...\practica1>
-```
-
-> ✅ Esto significa que el entorno está activo.
-
----
-
-## 🧠 **7. Procedimiento para seleccionar intérprete de Python en VS Code**
-
-1. Abre VS Code.
-2. Presiona **Ctrl + Shift + P** (para abrir el menú de comandos).
-3. Escribe: **"Python: Select Interpreter"** y selecciónalo.
-4. Elige el que diga algo como:
-   ```
-   ./env/Scripts/python.exe
-   ```
-5. Listo, ahora VS Code usa el Python de tu entorno virtual.
-
----
-
-## 📦 **8. Procedimiento para instalar Django**
-
-Con el entorno virtual activado, escribe:
+Con el entorno activado, escribe:
 
 ```bash
 pip install django
 ```
 
-Este comando descarga e instala Django.
-
-> ✅ Espera a que termine (puede tardar un momento).
+> ✅ Django se instalará. Espera a que termine.
 
 ---
 
-## 📏 **9. Procedimiento para ver la versión de Django**
+### 🔹 Paso 9: Ver las herramientas disponibles de Django
 
 Escribe:
 
 ```bash
-django-admin --version
+django-admin --help
 ```
 
-Verás algo como:
-
-```
-4.2.3
-```
-
-> ✅ Esto confirma que Django se instaló correctamente.
+> ✅ Verás una lista de comandos que Django puede hacer.
 
 ---
 
-## ❓ **10. Procedimiento para ver comandos de Django**
+### 🔹 Paso 10: Crear el proyecto `backend_blog` sin duplicar carpetas
 
-Escribe:
+Ejecuta este comando:
 
 ```bash
-django-admin help
+django-admin startproject backend_blog .
 ```
 
-Te mostrará todos los comandos disponibles, como `startproject`, `startapp`, etc.
+> ⚠️ El punto `.` al final evita crear una carpeta extra.
 
 ---
 
-## 🛠️ **11. Procedimiento para crear proyecto “backend_servidor” sin duplicar carpeta**
+### 🔹 Paso 11: Estructura de carpetas y archivos del proyecto
 
-Para evitar carpetas duplicadas, usa un punto al final:
+Después de crear el proyecto, tu estructura debe verse así:
 
-```bash
-django-admin startproject backend_servidor .
+```
+Guia_Django/
+│
+├── .venv/                  ← Entorno virtual
+├── backend_blog/           ← Carpeta del proyecto Django
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+└── (otros archivos ocultos)
 ```
 
-> ✅ El punto (`.`) significa "aquí", así el proyecto se crea dentro de `practica1` sin crear una carpeta extra.
+> ✅ `manage.py` es clave para ejecutar comandos.
 
 ---
 
-## ▶️ **12. Procedimiento para ejecutar el servidor Django**
+### 🔹 Paso 12: Ejecutar el servidor Django
 
-Escribe:
+En la terminal (con el entorno activado):
 
 ```bash
 python manage.py runserver
 ```
 
-Verás un mensaje como:
-
-```
-Starting development server at http://127.0.0.1:8000/
-```
-
-> ✅ Presiona **Ctrl + C** para detenerlo después.
+> ✅ Verás un mensaje diciendo que el servidor está en `http://127.0.0.1:8000/`
 
 ---
 
-## 🌍 **13. Procedimiento para cambiar idioma a es-mx en settings.py**
+### 🔹 Paso 13: Ver la página de bienvenida
 
-1. Abre en VS Code el archivo:
-   ```
-   backend_servidor/settings.py
-   ```
-2. Busca la línea:
-   ```python
-   LANGUAGE_CODE = 'en-us'
-   ```
-3. Cámbiala a:
-   ```python
-   LANGUAGE_CODE = 'es-mx'
-   ```
-4. También busca:
-   ```python
-   USE_TZ = True
-   ```
-   Y justo arriba, asegúrate de tener:
-   ```python
-   USE_I18N = True
-   ```
+Abre tu navegador (Chrome, Edge, etc.) y escribe:
 
-> ✅ Esto cambia el idioma de la interfaz a español (México).
+```
+http://127.0.0.1:8000
+```
+
+> ✅ Deberás ver la página de bienvenida de Django: "The install worked successfully!"
 
 ---
 
-## ⏹️ **14. Parar servidor**
+### 🔹 Paso 14: Detener el servidor
 
-En la terminal, mientras el servidor está corriendo, presiona:
+En la terminal, presiona:
 
 ```
 Ctrl + C
 ```
 
-Y luego escribe `y` y da Enter si te lo pide.
+> ✅ El servidor se detiene.
 
 ---
 
-## 🧩 **15. Procedimiento para crear la aplicación “app_peticiones”**
+### 🔹 Paso 15: Crear la aplicación `app_blog`
 
-Dentro de la carpeta `practica1`, con el entorno activado, escribe:
+En la terminal:
 
 ```bash
-python manage.py startapp app_peticiones
+python manage.py startapp app_blog
 ```
 
-Esto crea una carpeta llamada **app_peticiones** con los archivos necesarios.
+> ✅ Se crea la carpeta `app_blog` con archivos como `models.py`, `views.py`, etc.
 
 ---
 
-## 📥 **16. Procedimiento para registrar app_peticiones en backend_servidor**
+### 🔹 Paso 16: Estructura completa del proyecto
 
-Abre el archivo:
+Ahora tu estructura debe ser:
 
 ```
-backend_servidor/settings.py
+Guia_Django/
+│
+├── .venv/
+├── backend_blog/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── app_blog/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   └── ...
+├── manage.py
+└── ...
 ```
 
-Busca la lista `INSTALLED_APPS` y agrega `'app_peticiones'`:
+---
+
+### 🔹 Paso 17: Agregar `app_blog` en `settings.py`
+
+1. Abre en VS Code: `backend_blog/settings.py`
+2. Busca la lista `INSTALLED_APPS`
+3. Agrega `'app_blog'` al final:
 
 ```python
 INSTALLED_APPS = [
@@ -264,173 +248,75 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_peticiones',  # ← Aquí agregas tu app
+    'app_blog',  # ← Agrega esta línea
 ]
 ```
 
-> ✅ Así Django sabe que existe tu aplicación.
+> ✅ Guarda el archivo.
 
 ---
 
-## 🔗 **17. Procedimiento para incluir la ruta de app_peticiones en urls.py de backend_servidor**
+### 🔹 Paso 18: Crear la primera vista basada en funciones
 
-Abre:
+Abre el archivo: `app_blog/views.py`
 
-```
-backend_servidor/urls.py
-```
-
-Agrega `include` en la importación:
-
-```python
-from django.contrib import admin
-from django.urls import path, include  # ← incluye "include"
-```
-
-Luego, en `urlpatterns`, agrega:
-
-```python
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('app_peticiones.urls')),  # ← nueva línea
-]
-```
-
-> ✅ Esto conecta las URLs de tu app con el proyecto principal.
-
----
-
-## ⚙️ **18. Realizar configuraciones en settings.py y urls.py de backend_servidor**
-
-Ya hiciste ambas:
-- En `settings.py`: agregaste `'app_peticiones'` a `INSTALLED_APPS`.
-- En `urls.py`: agregaste `include('app_peticiones.urls')`.
-
-✅ ¡Listo! El proyecto está configurado.
-
----
-
-## 💬 **19. En views.py de app_peticiones agregar función `inicio`**
-
-Abre el archivo:
-
-```
-app_peticiones/views.py
-```
-
-Agrega este código:
+Reemplaza su contenido con:
 
 ```python
 from django.http import HttpResponse
 
-def inicio(request):
-    return HttpResponse("Hola 20 curso de Django")
+def index(request):
+    return HttpResponse("<h1>Bienvenido al Blog</h1>")
 ```
 
-> ✅ Esta función devuelve un mensaje cuando alguien entra a la página.
+> ✅ Esta vista muestra un mensaje simple.
 
 ---
 
-## 📎 **20. Crear el archivo urls.py en app_peticiones con la ruta “inicio”**
+### 🔹 Paso 19: Crear el archivo `urls.py` en `app_blog`
 
-1. Dentro de la carpeta `app_peticiones`, crea un archivo nuevo llamado `urls.py`.
-2. Escribe dentro:
+1. Dentro de la carpeta `app_blog`, crea un nuevo archivo llamado `urls.py`.
+
+---
+
+### 🔹 Paso 20: Código de `app_blog/urls.py` (una sola ruta)
+
+Pega este código:
 
 ```python
 from django.urls import path
-from . import views
+from . import views  # Importa las vistas de esta misma app
 
 urlpatterns = [
-    path('', views.inicio, name='inicio'),
+    path('', views.index, name='index'),  # Ruta raíz de la app
 ]
 ```
 
-> ✅ Esto dice: cuando entren a la página principal, muestra la función `inicio`.
+> ✅ Define una ruta que llama a la vista `index`.
 
 ---
 
-## ▶️ **30. Ejecutar servidor**
+### 🔹 Paso 21: Incluir `app_blog.urls` en `backend_blog/urls.py`
 
-En la terminal (con el entorno activado):
-
-```bash
-python manage.py runserver
-```
-
----
-
-## 🌐 **31. Procedimiento para ver la página de inicio en el navegador**
-
-1. Abre tu navegador (Chrome, Firefox, etc.).
-2. Escribe en la barra de direcciones:
-
-```
-http://127.0.0.1:8000
-```
-
-3. Deberás ver:
-
-```
-Hola 20 curso de Django
-```
-
-✅ ¡Tu primera página en Django!
-
----
-
-## 🔍 **32. Procedimiento para inspeccionar página**
-
-1. En el navegador, presiona **F12** o **clic derecho → Inspeccionar**.
-2. Verás el código HTML (aunque solo sea texto plano por ahora).
-3. Puedes ver la consola, red, etc.
-
-> ✅ Útil para depurar errores.
-
----
-
-⏹️ **Parar servidor**: Presiona `Ctrl + C` en la terminal.
-
----
-
-## 🧑‍💼 **33. En views.py agregar función `acerca_de_mi`**
-
-En `app_peticiones/views.py`, agrega:
+Abre `backend_blog/urls.py` y modifícalo así:
 
 ```python
-def acerca_de_mi(request):
-    datos = {
-        'Nombre': 'Aída',
-        'Edad': 80,
-        'Trabajo': 'CETis 87'
-    }
-    info = f"<h1>Acerca de mí</h1><p>Nombre: {datos['Nombre']}</p><p>Edad: {datos['Edad']}</p><p>Trabajo: {datos['Trabajo']}</p>"
-    return HttpResponse(info)
-```
+from django.contrib import admin
+from django.urls import path, include  # ← Asegúrate de importar 'include'
 
-> ✅ Envía un diccionario y muestra los datos en formato HTML.
-
----
-
-## 🔗 **34. Agregar segunda ruta en urls.py de app_peticiones**
-
-Abre `app_peticiones/urls.py` y agrega:
-
-```python
-path('acerca/', views.acerca_de_mi, name='acerca_de_mi'),
-```
-
-Queda así:
-
-```python
 urlpatterns = [
-    path('', views.inicio, name='inicio'),
-    path('acerca/', views.acerca_de_mi, name='acerca_de_mi'),
+    path('admin/', admin.site.urls),
+    path('', include('app_blog.urls')),  # ← Incluye las rutas de app_blog
 ]
 ```
 
+> ✅ Ahora el proyecto sabe que debe usar las rutas de `app_blog`.
+
 ---
 
-## ▶️ **35. Ejecutar servidor para ver "Acerca de mí"**
+### 🔹 Paso 22: Ejecutar el servidor
+
+En la terminal:
 
 ```bash
 python manage.py runserver
@@ -438,77 +324,240 @@ python manage.py runserver
 
 ---
 
-## 🌐 **36. Inspeccionar página**
+### 🔹 Paso 23: Detener el servidor
 
-Ve a:
-
-```
-http://127.0.0.1:8000/acerca/
-```
-
-Verás los datos en formato bonito. Usa **F12** para inspeccionar el HTML.
+Presiona `Ctrl + C` cuando quieras detenerlo.
 
 ---
 
-## 👋 **37. En views.py agregar función `hola` con parámetro**
+### 🔹 Paso 24: Crear el modelo `Publicacion`
 
-En `views.py`, agrega:
+Abre `app_blog/models.py` y escribe:
 
 ```python
-def hola(request, primer_nombre):
-    return HttpResponse(f"<h1>¡Hola, {primer_nombre}!</h1>")
+from django.db import models
+
+class Publicacion(models.Model):
+    titulo = models.CharField(max_length=200)  # Título de la publicación
+    contenido = models.TextField()             # Contenido
+    fecha_de_creacion = models.DateTimeField(auto_now_add=True)  # Fecha automática
+
+    def __str__(self):
+        return self.titulo  # Muestra el título en el admin
 ```
+
+> ✅ Este modelo representa una entrada de blog.
 
 ---
 
-## 🔗 **38. Agregar tercera ruta en urls.py**
+### 🔹 Paso 25: Realizar migraciones (crear archivo de migración)
 
-En `app_peticiones/urls.py`, agrega:
+En la terminal:
+
+```bash
+python manage.py makemigrations
+```
+
+> ✅ Django crea un archivo en `app_blog/migrations/` que describe los cambios en la base de datos.
+
+---
+
+### 🔹 Paso 26: Migrar (aplicar cambios a la base de datos)
+
+```bash
+python manage.py migrate
+```
+
+> ✅ La tabla `Publicacion` se crea en la base de datos (por defecto: SQLite).
+
+---
+
+### 🔹 Paso 27: Registrar el modelo en `admin.py`
+
+Abre `app_blog/admin.py` y escribe:
 
 ```python
-path('hola/<str:primer_nombre>/', views.hola, name='hola'),
+from django.contrib import admin
+from .models import Publicacion  # Importa el modelo
+
+admin.site.register(Publicacion)  # Registra el modelo
 ```
 
-> ✅ `<str:primer_nombre>` captura el nombre que escriban en la URL.
+> ✅ Ahora podrás ver `Publicacion` en el panel de administración.
 
 ---
 
-## ▶️ **39. Ejecutar servidor para ver "hola"**
+### 🔹 Paso 28: Crear superusuario
+
+En la terminal:
+
+```bash
+python manage.py createsuperuser
+```
+
+Te pedirá:
+
+- **Username**: `admin`
+- **Email address**: `elisa@gmail.com`
+- **Password**: `admin`
+- **Password (again)**: `admin`
+
+> ✅ Usuario administrador creado.
+
+---
+
+### 🔹 Paso 29: Ejecutar el servidor
 
 ```bash
 python manage.py runserver
 ```
 
-Abre en el navegador:
+---
 
+### 🔹 Paso 30: Detener el servidor
+
+`Ctrl + C` cuando quieras.
+
+---
+
+### 🔹 Paso 31: Crear la carpeta `templates` dentro de `app_blog`
+
+En VS Code, dentro de `app_blog`, crea una carpeta llamada `templates`.
+
+---
+
+### 🔹 Paso 32: Crear subcarpeta `app_blog` dentro de `templates`
+
+Dentro de `templates`, crea otra carpeta llamada `app_blog`.
+
+> ✅ Así: `app_blog/templates/app_blog/`
+
+> ✅ Esto evita conflictos si hay otras apps con archivos `index.html`.
+
+---
+
+### 🔹 Paso 33: Crear `index.html` en `app_blog/templates/app_blog/`
+
+Crea el archivo `index.html` y escribe:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Entradas del blog</h1>
+    
+    <!-- Lista de publicaciones -->
+    <ul>
+        <!-- Recorre cada publicación en el contexto -->
+        {% for publicacion in publicaciones %}
+            <li>
+                <!-- Muestra el título y la fecha de creación -->
+                <strong>{{ publicacion.titulo }}</strong> 
+                ({{ publicacion.fecha_de_creacion|date:"d/m/Y" }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
 ```
-http://127.0.0.1:8000/hola/Juan
+
+> ✅ Los `{% %}` son etiquetas de Django para lógica en plantillas.
+
+---
+
+### 🔹 Paso 34: Actualizar `views.py` para mostrar publicaciones
+
+Abre `app_blog/views.py` y reemplaza con:
+
+```python
+from django.shortcuts import render
+from .models import Publicacion  # Importa el modelo
+
+def index(request):
+    # Obtener todas las publicaciones de la base de datos
+    publicaciones = Publicacion.objects.all()
+    # Renderiza la plantilla y pasa los datos
+    return render(request, 'app_blog/index.html', {'publicaciones': publicaciones})
 ```
 
-Verás: **¡Hola, Juan!**
-
-Puedes cambiar "Juan" por cualquier nombre.
+> ✅ `render` combina la vista con la plantilla y los datos.
 
 ---
 
-# 🎉 ¡Felicidades!
+### 🔹 Paso 35: Crear archivo de requerimientos (`requirements.txt`)
 
-Has creado tu primera aplicación en Django con:
+En la terminal:
 
-- Vistas que muestran mensajes.
-- URLs que responden a diferentes direcciones.
-- Funciones que reciben parámetros.
-- Datos enviados desde el código.
+```bash
+pip freeze > requirements.txt
+```
 
----
-
-📌 **Recursos útiles:**
-- Documentación de Django: https://docs.djangoproject.com/
-- Tutorial usado como base: [Building a Django CRUD Todo App](https://dev.to/aadarsh-nagrath/building-a-django-crud-todo-app-from-scratch-fe3)
+> ✅ Crea un archivo con todas las librerías instaladas (útil para compartir el proyecto).
 
 ---
 
-> ✅ Siguiente clase: Aprenderemos a usar **plantillas HTML** para hacer páginas más bonitas.
+### 🔹 Paso 36: Ejecutar el servidor (¡proyecto funcionando!)
+
+```bash
+python manage.py runserver
+```
+
+---
+
+### 🔹 Paso 37: Proyecto funcionando 🎉
+
+1. Abre el navegador y ve a:
+   ```
+   http://127.0.0.1:8000
+   ```
+
+   > ✅ Verás "Entradas del blog" y si ya agregaste publicaciones, se mostrarán.
+
+2. Ve al panel de administración:
+   ```
+   http://127.0.0.1:8000/admin
+   ```
+
+   - Inicia sesión con:
+     - Usuario: `admin`
+     - Contraseña: `admin`
+   - Agrega una o más publicaciones en `Publicacions`.
+
+3. Vuelve a la página principal para verlas.
+
+---
+
+## ✅ ¡Felicidades! Has creado tu primer proyecto en Django.
+
+### 🧠 ¿Qué aprendiste?
+- Usar la terminal.
+- Trabajar con entornos virtuales.
+- Crear un proyecto y una app en Django.
+- Hacer modelos, vistas, URLs y plantillas.
+- Usar la base de datos y el panel de administración.
+
+---
+
+## 📌 Consejos finales
+- Guarda siempre tus archivos en VS Code (`Ctrl + S`).
+- Activa el entorno virtual cada vez que abras el proyecto.
+- Usa `requirements.txt` para reinstalar Django si cambias de computadora.
+
+---
+
+¿Quieres continuar? Puedes agregar:
+- Formularios.
+- Estilos con CSS.
+- Más modelos (como Categorías o Autores).
+
+¡Sigue aprendiendo! 🚀
 
 --- 
 
+📌 **Guía creada para estudiantes de preparatoria – Nivel principiante – Windows**  
+👨‍🏫 Profesor/Tutor: [Ing. Eliseo Nava]  
+📅 Fecha: Abril 2025
