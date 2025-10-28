@@ -1,9 +1,3 @@
-# Practica1-curso-django-estatal
-primera practica django response
-¡Claro! A continuación, te presento un **material didáctico paso a paso**, pensado especialmente para **estudiantes de preparatoria** que están empezando con **Django**. El contenido está explicado de forma clara, sencilla y ordenada, siguiendo las instrucciones que solicitaste, basado en el conocimiento proporcionado y adaptado a nivel **principiante**.
-
----
-
 # 🎓 **Aplicación: Explicación de las vistas y URLs de Django**  
 **Curso: Introducción a Django (Backend Web)**  
 **Nivel: Principiante**  
@@ -405,9 +399,9 @@ En `app_peticiones/views.py`, agrega:
 ```python
 def acerca_de_mi(request):
     datos = {
-        'Nombre': 'Eliseo',
-        'Edad': 60,
-        'Trabajo': 'cbtis'
+        'Nombre': 'Aída',
+        'Edad': 80,
+        'Trabajo': 'CETis 87'
     }
     info = f"<h1>Acerca de mí</h1><p>Nombre: {datos['Nombre']}</p><p>Edad: {datos['Edad']}</p><p>Trabajo: {datos['Trabajo']}</p>"
     return HttpResponse(info)
@@ -497,50 +491,6 @@ Puedes cambiar "Juan" por cualquier nombre.
 
 ---
 
-## ➕ **40. En views.py agregar función `calcula_suma`**
-
-En `views.py`:
-
-```python
-def calcula_suma(request, num1, num2):
-    resultado = num1 + num2
-    return HttpResponse(f"<h1>La suma de {num1} + {num2} es {resultado}</h1>")
-```
-
----
-
-## 🔗 **41. Agregar cuarta ruta en urls.py**
-
-```python
-path('suma/<int:num1>/<int:num2>/', views.calcula_suma, name='calcula_suma'),
-```
-
-> ✅ `<int:num1>` y `<int:num2>` solo aceptan números enteros.
-
----
-
-## ▶️ **42. Ejecutar servidor para ver calcula_suma**
-
-```bash
-python manage.py runserver
-```
-
-Abre en el navegador:
-
-```
-http://127.0.0.1:8000/suma/5/3
-```
-
-Verás:
-
-```
-La suma de 5 + 3 es 8
-```
-
-✅ ¡Funciona!
-
----
-
 # 🎉 ¡Felicidades!
 
 Has creado tu primera aplicación en Django con:
@@ -558,12 +508,7 @@ Has creado tu primera aplicación en Django con:
 
 ---
 
-👨‍🏫 **Profesor:** Eliseo  
-📚 **Curso:** Desarrollo Web con Django  
-📅 **Nivel:** 1° de Preparatoria (Introducción a Programación)
-
 > ✅ Siguiente clase: Aprenderemos a usar **plantillas HTML** para hacer páginas más bonitas.
 
 --- 
 
-¿Quieres que te dé este material en formato PDF o Word para imprimirlo? Puedo ayudarte.
