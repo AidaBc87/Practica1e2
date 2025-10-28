@@ -1,9 +1,4 @@
 # Blog-publicaciones-en-django
-Guia para aprender paso a paso para crear un proyecto básico en Django. Esta guía la utilizaran los estudiantes de preparatoria. nivel principiante. Computadora con windows.
-¡Claro! A continuación, te presento una **guía paso a paso** para que estudiantes de **preparatoria** puedan crear un **proyecto básico en Django**, desde cero, en una computadora con **Windows**. Todo está explicado de forma clara, sencilla y con instrucciones precisas.
-
----
-
 ## 📚 **Guía Paso a Paso: Crear un Proyecto Básico en Django (Nivel Principiante)**
 
 ---
@@ -559,5 +554,3 @@ python manage.py runserver
 --- 
 
 📌 **Guía creada para estudiantes de preparatoria – Nivel principiante – Windows**  
-👨‍🏫 Profesor/Tutor: [Ing. Eliseo Nava]  
-📅 Fecha: Abril 2025
